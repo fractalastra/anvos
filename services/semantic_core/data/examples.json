@@ -1,0 +1,27 @@
+{
+  "valid": [
+    "La vida existe en el sistema.",
+    "El sistema presenta impacto.",
+    "El impacto modifica la estructura del sistema.",
+    "Este impacto es reversible.",
+    "Este impacto es irreversible.",
+    "La vida experimenta impacto en el sistema."
+  ],
+  "invalid": [
+    "La vida debe preservarse.",
+    "El sistema decide como responder.",
+    "El impacto fue injusto.",
+    "Si el cambio es reversible, puede hacerse.",
+    "Si el cambio es irreversible, debe impedirse."
+  ],
+  "frontier": [
+    "La vida persiste.",
+    "El sistema organiza sus elementos.",
+    "La irreversibilidad limita futuros estados."
+  ],
+  "contaminated": [
+    "La vida tiene el maximo valor.",
+    "El sistema controla el impacto.",
+    "Lo reversible es preferible."
+  ]
+}

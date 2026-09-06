@@ -1,0 +1,9 @@
+policy:
+  default_mode: NO_MUTATION
+scan:
+  paths:
+    - /persist/anvos-quarantine
+  exclude:
+    - "__pycache__"
+output:
+  base: /persist/anvos-data/sentinel

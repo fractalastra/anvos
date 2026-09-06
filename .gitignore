@@ -1,4 +1,8 @@
-*.pyc
+# El repositorio embarca services/ + los legales de la raiz. NADA MAS.
+.archive_no_publicar/
+ESTADO_STAGING.md
 __pycache__/
+*.pyc
 *.minisig
-.archive*/
+*.mldsa
+ring_link_peers.json

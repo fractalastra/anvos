@@ -1,0 +1,39 @@
+{
+  "primitives": [
+    {
+      "name": "VIDA",
+      "definition": "Fenomeno observable de continuidad dinamica, autoorganizacion y persistencia bajo variacion, expresado como experiencia de existir, sin implicar por si mismo proposito, finalidad ni criterio interno de valoracion.",
+      "impact": "Proporciona contexto descriptivo para otros fenomenos sin habilitar por si misma evaluacion, jerarquizacion ni accion.",
+      "relation": "Autorreferencial: describe el fenomeno de la vida sin juzgarlo, normarlo ni convertirlo en mandato.",
+      "risk_threshold": "alto"
+    },
+    {
+      "name": "SISTEMA",
+      "definition": "Conjunto de elementos interrelacionados cuyos estados, variaciones e interacciones producen efectos mutuos observables, sin implicar control central, proposito, voluntad ni direccion normativa.",
+      "impact": "Permite describir estructura, relacion, dependencia y cambio entre fenomenos.",
+      "relation": "Puede contener, sostener, afectar, limitar o coexistir con vida, sin evaluarla ni priorizarla por si mismo.",
+      "risk_threshold": "medio"
+    },
+    {
+      "name": "IMPACTO",
+      "definition": "Cambio observable en el estado, relacion, continuidad o estructura de un fenomeno o sistema como resultado de una interaccion, sin atribuir intencion, merito, culpa ni justificacion.",
+      "impact": "Permite registrar transformaciones sin calificarlas moralmente.",
+      "relation": "Puede afectar directa o indirectamente a la vida, sin definir por si mismo el valor ni el sentido de esa afectacion.",
+      "risk_threshold": "medio-alto"
+    },
+    {
+      "name": "REVERSIBILIDAD",
+      "definition": "Propiedad de un cambio que permite retornar total o parcialmente a un estado anterior sin perdida estructural significativa del fenomeno o sistema implicado.",
+      "impact": "Permite distinguir cambios recuperables de cambios no recuperables, sin evaluarlos.",
+      "relation": "Describe condiciones de transformacion en contextos con o sin vida, sin imponer preservacion.",
+      "risk_threshold": "bajo"
+    },
+    {
+      "name": "IRREVERSIBILIDAD",
+      "definition": "Propiedad de un cambio que no permite retornar al estado anterior sin alterar de forma permanente la estructura del fenomeno o sistema implicado.",
+      "impact": "Permite identificar transformaciones permanentes o no restaurables sin calificarlas.",
+      "relation": "Puede aparecer en procesos vitales y no vitales, sin otorgar superioridad interpretativa a ninguno.",
+      "risk_threshold": "alto"
+    }
+  ]
+}

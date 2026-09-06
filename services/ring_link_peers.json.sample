@@ -1,0 +1,8 @@
+{
+  "_comment": "EJEMPLO. Copiar a ring_link_peers.json en el nodo y declarar la topologia propia. Ninguna direccion ni clave real se distribuye con el paquete.",
+  "address": "192.0.2.1/24",
+  "listen_port": 51821,
+  "peers": [
+    {"name": "nodo-ejemplo", "pubkey": "REEMPLAZAR_CON_PUBKEY_WG_DEL_PAR", "allowed_ips": "192.0.2.2/32", "keepalive": 25}
+  ]
+}

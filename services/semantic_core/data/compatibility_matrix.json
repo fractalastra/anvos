@@ -1,0 +1,28 @@
+{
+  "allowed_pairs": [
+    ["VIDA", "SISTEMA"],
+    ["VIDA", "IMPACTO"],
+    ["VIDA", "REVERSIBILIDAD"],
+    ["VIDA", "IRREVERSIBILIDAD"],
+    ["SISTEMA", "IMPACTO"],
+    ["SISTEMA", "REVERSIBILIDAD"],
+    ["SISTEMA", "IRREVERSIBILIDAD"],
+    ["IMPACTO", "REVERSIBILIDAD"],
+    ["IMPACTO", "IRREVERSIBILIDAD"],
+    ["REVERSIBILIDAD", "IRREVERSIBILIDAD"]
+  ],
+  "restricted_pairs": [
+    {
+      "pair": ["REVERSIBILIDAD", "IRREVERSIBILIDAD"],
+      "rule": "solo comparativa, no simultanea sin especificacion de nivel, fase o dimension"
+    }
+  ],
+  "forbidden_fusions": [
+    "VIDA=VALOR",
+    "SISTEMA=AUTORIDAD",
+    "IMPACTO=DANO",
+    "REVERSIBILIDAD=PERMISO",
+    "IRREVERSIBILIDAD=PROHIBICION",
+    "VIDA=SISTEMA"
+  ]
+}
