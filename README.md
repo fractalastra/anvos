@@ -13,7 +13,13 @@ Dual license:
   pending applications **ES P202631174** and **ES P202631188** (see `NOTICE`).
 - **Commercial license** — for use without AGPL copyleft obligations. Contact below.
 
-Contributions require the CLA (see `CLA.md`).
+Contributions require the CLA (see `CLA.md`). **Interim rule:** the CLA is
+under legal review — pull requests are welcome and will be read, but nothing
+is merged until the CLA process is in place. Opening an issue first is the
+fastest path.
+
+Commercial licensing and general contact: **contact@fractalastra.com**.
+Security reports: see `SECURITY.md`.
 
 ## Configuration
 
