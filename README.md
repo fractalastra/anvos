@@ -28,3 +28,13 @@ release key, generated at your own admission ceremony. Shipping our manifest
 would tie your node's trust to our identity — the same reason no trust anchor
 is embedded in the sources. Generate your manifest over the deployed tree, sign
 it with your release key, and layerd enforces it fail-closed from then on.
+
+## Optional module: Sentinel deep scan
+
+`sentinel_immune.py` can orchestrate **Sentinel**, a separate deep-analysis
+module (secrets, permissions, duplicates, container and network analyzers)
+distributed independently and not included in this repository. Without it the
+service degrades cleanly: it reports the immune layer as incomplete
+(fail-closed) and the rest of the node layer runs unaffected. To enable the
+deep scan, obtain Sentinel separately and place the signed `sentinel.pyz`
+next to the services — availability is announced through the project channels.
