@@ -11,7 +11,7 @@ ANVOS is the governance layer of an AstraNova node: 82 Python services, standard
 ## What you get, measurably
 
 - **Fail-closed execution.** A service whose signature does not verify against *your* release key is never started. No warning mode.
-- **Self-attestation with a verdict.** `self_integrity` walks the deployed tree and emits `SEALED` or `TAMPER`; `vigias_watch` turns a broken signature into a persistent critical state; `anv-crit-escalator` writes a signed, single-writer escalation file; `alerts_channel` publishes a signed envelope that a master can verify against the node's genesis-bound authorship certificate.
+- **Self-attestation with a verdict.** `self_integrity` walks the deployed tree and emits `SEALED` or `TAMPER`; `vigias_watch` turns a broken signature into a persistent critical state; `anv-crit-escalator` escalates persistent critical states to the operator queue; `alerts_channel` publishes a signed envelope that a master can verify against the node's genesis-bound authorship certificate.
 - **Nothing hardcoded.** No addresses, node names or trust anchors in the sources. Everything comes from the environment; undeclared values fail closed (local-only).
 
 ## Try it in ten minutes
