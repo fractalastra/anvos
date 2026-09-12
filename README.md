@@ -1,10 +1,33 @@
 # AstraNova ANVOS — node layer
 
-> **Pre-release (private).** Publication pending final certification review.
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPLv3-blue.svg)](LICENSE)
+[![Patent pending](https://img.shields.io/badge/patent-pending%20(ES)-lightgrey.svg)](NOTICE)
+[![Python stdlib only](https://img.shields.io/badge/python-3.11%2B%20stdlib%20only-green.svg)](services/)
 
-Sovereign node governance layer: every service is signature-verified before every
-execution (fail-closed). 82 stdlib-only Python services: fleet attestation, integrity
-chains, deception, telemetry, AI governance.
+**A node that verifies every service against a signed manifest before every execution, and refuses to run anything it cannot verify.**
+
+ANVOS is the governance layer of an AstraNova node: 82 Python services, standard library only, supervised by a daemon that checks each one's signature at each run (fail-closed). The services attest the node's own integrity, cross-attest the fleet, keep hash-chained integrity records, run deception sensors, publish signed alert envelopes and escalate critical states to the operator.
+
+## What you get, measurably
+
+- **Fail-closed execution.** A service whose signature does not verify against *your* release key is never started. No warning mode.
+- **Self-attestation with a verdict.** `self_integrity` walks the deployed tree and emits `SEALED` or `TAMPER`; `vigias_watch` turns a broken signature into a persistent critical state; `anv-crit-escalator` writes a signed, single-writer escalation file; `alerts_channel` publishes a signed envelope that a master can verify against the node's genesis-bound authorship certificate.
+- **Nothing hardcoded.** No addresses, node names or trust anchors in the sources. Everything comes from the environment; undeclared values fail closed (local-only).
+
+## Try it in ten minutes
+
+Every service is a standalone script that prints one JSON record and exits 0. With an empty data directory you see the fail-closed behaviour immediately:
+
+```sh
+git clone https://github.com/fractalastra/anvos.git && cd anvos
+mkdir -p /tmp/anvos/data /tmp/anvos/staging
+export ANVOS_DATA=/tmp/anvos/data ANVOS_STAGING=/tmp/anvos/staging
+python3 services/vigias_watch.py      # {"svc": "vigias_watch", ... "verdict": "SUPERVISION_OK"}
+python3 services/self_integrity.py    # verifier_ok: false — no embedded verifier: reports, does not pretend
+python3 services/alerts_channel.py    # state: PUBLICADO_SIN_FIRMA — no authorship key: says so, never fakes a signature
+```
+
+To run the supervised layer for real, generate and sign your own manifest (see *Bootstrapping* below). The supervisor is `services/anvos-layerd.py`.
 
 ## Licensing
 

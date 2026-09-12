@@ -6,3 +6,4 @@ __pycache__/
 *.minisig
 *.mldsa
 ring_link_peers.json
+.vigia_estado.json
